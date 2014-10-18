@@ -7675,4 +7675,23 @@
       </description>
     </field>
   </message>
+  
+  <message abbrev="Agent" name="Agent" id="850">
+  	<field name="Agent Class" abbrev="agent_class" type="plaintext"/>
+  	<field name="Agent Name" abbrev="agent_name" type="plaintext"/>
+  	<field name="Agent State" abbrev="agent_state" type="plaintext" unit="TupleList"/>  	
+  </message>
+  
+  <message abbrev="AgentCommand" name="Agent Command" id="851">
+  	<field name="Command" abbrev="cmd" type="uint8_t" unit="Enumerated" prefix="ACMD">
+  		<value abbrev="INSTANTIATION_REQUEST" name="Instantiation Request" id="1"/>
+  		<value abbrev="INSTANTIATION_SUCCESS" name="Instantiation Success" id="2"/>
+  		<value abbrev="INSTANTIATION_FAILURE" name="Instantiation Failure" id="3"/>
+  		<value abbrev="STATE_REQUEST" name="State Request" id="4"/> 
+  		<value abbrev="STATE_REPLY" name="State Reply" id="5"/>
+  	</field>
+  	<field name="Request Identifier" abbrev="request_id" type="uint16_t"/>
+  	<field name="Extra Information" abbrev="info" type="plaintext"/>
+  	<field name="Arguments" abbrev="args" type="message-list" subtype="Agent"/>  	
+  </message>  
 </messages>
