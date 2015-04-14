@@ -6650,9 +6650,9 @@
         identify replies.
       </description>
     </field>
-    <field name="Plan Identifier" abbrev="plan_id" type="plaintext">
+    <field name="Object Identifier" abbrev="object_id" type="plaintext">
       <description>
-        The identifier for the plan to be stopped / started / loaded /
+        The identifier for the object in arg to be stopped / started / loaded /
         retrieved according to the command requested (*op* field).
       </description>
     </field>
@@ -6669,6 +6669,32 @@
         </description>
       </value>
       <!-- Response flags -->
+    </field>
+    <field name="Data Type" abbrev="dt" unit="Enumerated" type="uint8_t" prefix="PCD">
+      <description>
+        Indicates the plan data type (maneuver/specification/memento) in the
+	request / reply argument.
+      </description>
+      <value id="0" name="None" abbrev="NONE">
+        <description>
+	  Indicates that the data type inside arg field is empty.
+	</description>
+      </value>
+      <value id="1" name="Plan" abbrev="PLAN">
+        <description>
+	  Indicates that the data type inside arg field is of type PlanSpecification.
+	</description>
+	</value>
+      <value id="2" name="Maneuver" abbrev="MANEUVER">
+        <description>
+	  Indicates that the data type inside arg field is of type Maneuver.
+	</description>
+        </value>
+	<value id="3" name="Memento" abbrev="MEMENTO">
+          <description>
+	    Indicates that the data type inside arg field is of type PlanMemento.
+	  </description>
+        </value>
     </field>
     <field name="Request/Reply Argument" abbrev="arg" type="message">
       <description>
