@@ -316,6 +316,7 @@
       <message-type abbrev="CommsRelay"/>
       <message-type abbrev="FormationPlanExecution"/>
       <message-type abbrev="Dislodge"/>
+      <message-type abbrev="FormationPathFollowing"/>
     </message-group>
 
     <message-group name="Control Command" abbrev="ControlCommand">
