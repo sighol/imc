@@ -6043,6 +6043,7 @@
     <description>
       Message that should be dispatched by a maneuver after it has been interrupted.
     </description>
+  </message>
 
   <!-- Vehicle Supervision -->
   <message id="500" name="Vehicle State" abbrev="VehicleState" source="vehicle">
