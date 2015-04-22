@@ -198,6 +198,7 @@
     <unit abbrev="Nm" name="Newton meter"/>
     <unit abbrev="NTU" name="Nephelometric Turbidity Unit"/>
     <unit abbrev="N" name="Newton"/>
+    <unit abbrev="nm" name="Nanometer"/>
     <unit abbrev="Pa" name="Pascal"/>
     <unit abbrev="%" name="Percent"/>
     <unit abbrev="PPM" name="Parts per million"/>
