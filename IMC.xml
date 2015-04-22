@@ -7532,7 +7532,31 @@
     <field name="Repetitions" abbrev="reps" type="uint8_t"/>
     <field name="Target Size" abbrev="tsize" type="uint8_t"/>
   </message>
-
+  
+  <message id="710" name="HyperSpectral Data" abbrev="HyperSpecData" source="vehicle">
+    <description>
+    	This message is used to transmit a series of data from HyperSpectral sensor.
+    </description>
+    
+    <field name="Start Frequency" abbrev="start_freq" type="fp32_t" unit="nm"/>
+    <field name="End Frequency" abbrev="end_freq" type="fp32_t" unit="nm"/>    
+    <field name="Format" abbrev="format" type="uint8_t" unit="Enumerated" prefix="FMT">
+    	<value abbrev="JPEG" name="JPEG" id="1"/>
+    	<value abbrev="PNG" name="PNG" id="2"/>
+    	<value abbrev="BMP" name="BMP" id="3"/>
+    </field>        
+    <field name="Image Data" abbrev="data" type="rawdata"/>
+  </message>
+  
+  <message id="711" name="HyperSpectral Snapshot" abbrev="HyperSnapshot" source="vehicle">
+	<description>
+    	This message includes a series of hyperspectral samples over the same start and end frequency.  
+    </description>
+    <field name="Start Time" abbrev="start_time" type="fp64_t" unit="s"/>
+    <field name="End Time" abbrev="end_time" type="fp64_t" unit="s"/>
+    <field name="Historical Data" abbrev="data" type="message-list" message-type="HyperSpecData"/>
+  </message>
+  
   <!-- External -->
   <message id="750" name="Remote State" abbrev="RemoteState" source="vehicle">
     <description>State summary for a remote vehicle.</description>
