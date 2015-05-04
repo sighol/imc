@@ -8124,7 +8124,19 @@
     <field name="Leg" abbrev="Leg" type="int64_t" />
   </message>
 
-  <message id="902" name="DVL Ranges" abbrev="DvlRanges">
+  <message id="902" name="Recon Command" abbrev="ReconCommand">
+    <description>
+      Message describing a command sent to Recon.
+      It is inteded to be logged each time a command is sent to RECON.
+    </description>
+    <field name="Command Name" abbrev="name" type="plaintext" />
+    <field name="Command Argument 1" abbrev="arg1" type="fp64_t" />
+    <field name="Command Argument 2" abbrev="arg2" type="fp64_t" />
+    <field name="Command Argument 3" abbrev="arg3" type="fp64_t" />
+    <field name="Command Argument 4" abbrev="arg4" type="fp64_t" />
+  </message>
+
+  <message id="903" name="DVL Ranges" abbrev="DvlRanges">
     <description>
       DVL Ranges
     </description>
