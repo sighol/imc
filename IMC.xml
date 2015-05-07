@@ -8146,4 +8146,26 @@
     <field name="Range 4" abbrev="range4" type="fp32_t" />
   </message>
 
+  <message id="904" name="Recon Message" abbrev="ReconMessage">
+    <description>
+      Message describing a command sent over RECON.
+    </description>
+    <field name="Message" abbrev="msg" type="plaintext" />
+    <field name="Direction" abbrev="direction" type="uint8_t" unit="Enumerated" prefix="RC">
+      <description>
+        Command direction.
+      </description>
+      <value id="0x00" name="Vehicle To External" abbrev="VEHICLE_TO_EXTERNAL">
+        <description>
+          Vehicle to external
+        </description>
+      </value>
+      <value id="0x01" name="External To Vehicle" abbrev="EXTERNAL_TO_VEHICLE">
+        <description>
+          External to vehicle
+        </description>
+      </value>
+    </field>
+  </message>
+
 </messages>
