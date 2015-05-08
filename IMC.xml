@@ -8082,9 +8082,10 @@
     </description>
   </message>
 
-  <message id="900" name="Highpass Control Parcel" abbrev="HighpassControlParcel">
+  <!-- REMUS messages -->
+  <message id="1900" name="Highpass Control Parcel" abbrev="HighpassControlParcel">
     <description>
-      Debug Information
+      Debug Information for the highpass controller for REMUS.
     </description>
     <field name="Highpass Value" abbrev="highpass" type="fp32_t"/>
     <field name="Altitude rate of change" abbrev="adot" type="fp32_t"/>
@@ -8094,40 +8095,40 @@
     <field name="Auto Altitude" abbrev="auto_altitude" type="fp32_t"/>
   </message>
 
-  <message id="901" name="Recon State" abbrev="ReconState">
+  <message id="1901" name="Recon Status" abbrev="ReconStatus">
     <description>
-      ReconState
+      Recon Status message
     </description>
-    <field name="Remote Control Allowed" abbrev="RemoteControlAllowed" type="uint8_t" />
-    <field name="Remote Control Enabled" abbrev="RemoteControlEnabled" type="uint8_t" />
-    <field name="Remote Control Active" abbrev="RemoteControlActive" type="uint8_t" />
-    <field name="Depth Only Control Enabled" abbrev="DepthOnlyControlEnabled" type="uint8_t" />
-    <field name="Direct Control Enabled" abbrev="DirectControlEnabled" type="uint8_t" />
-    <field name="Return To Closest Point On Line" abbrev="ReturnToClosestPointOnLine" type="uint8_t" />
-    <field name="On Shore Power" abbrev="OnShorePower" type="uint8_t" />
-    <field name="Latitude" abbrev="Latitude" type="fp64_t" />
-    <field name="Longitude" abbrev="Longitude" type="fp64_t" />
-    <field name="Depth" abbrev="Depth" type="fp64_t" />
-    <field name="Depth Reference" abbrev="DepthRef" type="fp64_t" />
-    <field name="Altitude" abbrev="Altitude" type="fp64_t" />
-    <field name="Altitude Reference" abbrev="AltitudeRef" type="fp64_t" />
-    <field name="Pitch" abbrev="Pitch" type="fp64_t" />
-    <field name="Roll" abbrev="Roll" type="fp64_t" />
-    <field name="Rpm" abbrev="Rpm" type="fp64_t" />
-    <field name="Rpm Reference" abbrev="RpmRef" type="fp64_t" />
-    <field name="Speed" abbrev="Speed" type="fp64_t" />
-    <field name="Speed Reference" abbrev="SpeedRef" type="fp64_t" />
-    <field name="Heading" abbrev="Heading" type="fp64_t" />
-    <field name="Heading Rate" abbrev="HeadingRate" type="fp64_t" />
-    <field name="Heading Reference" abbrev="HeadingRef" type="fp64_t" />
-    <field name="Mission State" abbrev="MissionState" type="uint8_t" />
-    <field name="Leg" abbrev="Leg" type="int64_t" />
+    <field name="Remote Control Allowed" abbrev="remote_control_allowed" type="uint8_t" />
+    <field name="Remote Control Enabled" abbrev="remote_control_enabled" type="uint8_t" />
+    <field name="Remote Control Active" abbrev="remote_control_active" type="uint8_t" />
+    <field name="Depth Only Control Enabled" abbrev="depth_only_control_enabled" type="uint8_t" />
+    <field name="Direct Control Enabled" abbrev="direct_control_enabled" type="uint8_t" />
+    <field name="Return To Closest Point On Line" abbrev="return_to_closest_point_on_line" type="uint8_t" />
+    <field name="On Shore Power" abbrev="on_shore_power" type="uint8_t" />
+    <field name="Latitude" abbrev="latitude" type="fp64_t" />
+    <field name="Longitude" abbrev="longitude" type="fp64_t" />
+    <field name="Depth" abbrev="depth" type="fp64_t" />
+    <field name="Depth Reference" abbrev="depth_ref" type="fp64_t" />
+    <field name="Altitude" abbrev="altitude" type="fp64_t" />
+    <field name="Altitude Reference" abbrev="altitude_ref" type="fp64_t" />
+    <field name="Pitch" abbrev="pitch" type="fp64_t" />
+    <field name="Roll" abbrev="roll" type="fp64_t" />
+    <field name="Rpm" abbrev="rpm" type="fp64_t" />
+    <field name="Rpm Reference" abbrev="rpm_ref" type="fp64_t" />
+    <field name="Speed" abbrev="speed" type="fp64_t" />
+    <field name="Speed Reference" abbrev="speed_ref" type="fp64_t" />
+    <field name="Heading" abbrev="heading" type="fp64_t" />
+    <field name="Heading Rate" abbrev="heading_rate" type="fp64_t" />
+    <field name="Heading Reference" abbrev="heading_ref" type="fp64_t" />
+    <field name="Mission State" abbrev="mission_state" type="uint8_t" />
+    <field name="Leg" abbrev="leg" type="int64_t" />
   </message>
 
-  <message id="902" name="Recon Command" abbrev="ReconCommand">
+  <message id="1902" name="Recon Command" abbrev="ReconCommand">
     <description>
       Message describing a command sent to Recon.
-      It is inteded to be logged each time a command is sent to RECON.
+      It is intended to be logged each time a command is sent to RECON.
     </description>
     <field name="Command Name" abbrev="name" type="plaintext" />
     <field name="Command Argument 1" abbrev="arg1" type="fp64_t" />
@@ -8136,17 +8137,21 @@
     <field name="Command Argument 4" abbrev="arg4" type="fp64_t" />
   </message>
 
-  <message id="903" name="DVL Ranges" abbrev="DvlRanges">
+  <message id="1903" name="DVL Ranges" abbrev="DvlRanges">
     <description>
       DVL Ranges
     </description>
+    <field name="Direction" abbrev="direction" type="uint8_t" unit="Enumerated" prefix="DR">
+      <value id="0x00" name="Up" abbrev="up" />
+      <value id="0x01" name="Down" abbrev="down" />
+    </field>
     <field name="Range 1" abbrev="range1" type="fp32_t" />
     <field name="Range 2" abbrev="range2" type="fp32_t" />
     <field name="Range 3" abbrev="range3" type="fp32_t" />
     <field name="Range 4" abbrev="range4" type="fp32_t" />
   </message>
 
-  <message id="904" name="Recon Message" abbrev="ReconMessage">
+  <message id="1904" name="Recon Message" abbrev="ReconMessage">
     <description>
       Message describing a command sent over RECON.
     </description>
@@ -8165,6 +8170,16 @@
           External to vehicle
         </description>
       </value>
+    </field>
+  </message>
+
+  <message id="1905" name="Recon Control State" abbrev="ReconControlState">
+    <description>
+      Recon Control State. Indicating if RECON is able to receive messages.
+    </description>
+    <field name="State" abbrev="state" type="uint8_t" unit="Enumerated" prefix="RCS">
+      <value id="0" name="Enabled" abbrev="ENABLED" />
+      <value id="1" name="Disabled" abbrev="DISABLED" />
     </field>
   </message>
 
