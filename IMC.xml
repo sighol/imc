@@ -8183,4 +8183,24 @@
     </field>
   </message>
 
+  <message id="1910" name="Adot Debud" abbrev="AdotDebug">
+    <description>
+      Adot Debug
+    </description>
+    <field name="dt" abbrev="dt" type="fp64_t" />
+    <field name="k_d" abbrev="k_d" type="fp64_t" />
+    <field name="range1" abbrev="range1" type="fp64_t" />
+    <field name="range2" abbrev="range2" type="fp64_t" />
+    <field name="range3" abbrev="range3" type="fp64_t" />
+    <field name="range4" abbrev="range4" type="fp64_t" />
+    <field name="u" abbrev="u" type="fp64_t" />
+    <field name="v" abbrev="v" type="fp64_t" />
+    <field name="w" abbrev="w" type="fp64_t" />
+    <field name="phi" abbrev="phi" type="fp64_t" />
+    <field name="theta" abbrev="theta" type="fp64_t" />
+    <field name="psi" abbrev="psi" type="fp64_t" />
+    <field name="adot" abbrev="adot" type="fp64_t" />
+  </message>
+
+
 </messages>
