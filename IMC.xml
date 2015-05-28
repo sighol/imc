@@ -8202,5 +8202,13 @@
     <field name="adot" abbrev="adot" type="fp64_t" />
   </message>
 
+  <message id="1920" name="Simulated Time" abbrev="SimulatedTime">
+    <description>
+      The current simulation time used by AUVSim.
+      Used to get the timestamp for integration.
+    </description>
+    <field name="Timestamp" abbrev="htime" type="fp64_t" unit="s"/>
+    <field name="Timestep" abbrev="dt" type="fp32_t" unit="s" />
+  </message>
 
 </messages>
