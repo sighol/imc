@@ -8211,4 +8211,23 @@
     <field name="Timestep" abbrev="dt" type="fp32_t" unit="s" />
   </message>
 
+  <message id="1930" abbrev="ReconDesiredHeadingAngle" name="Recon Desired Heading Angle">
+    <field name="value" abbrev="value" type="fp64_t" unit="rad" />
+  </message>
+
+  <message id="1931" abbrev="ReconDesiredHeadingWaypoint" name="Recon Desired Heading Waypoint">
+    <field name="lat" abbrev="lat" type="fp64_t" unit="rad" />
+    <field name="lon" abbrev="lon" type="fp64_t" unit="rad" />
+  </message>
+
+  <message id="1932" abbrev="ReconDesiredSpeed" name="Recon Desired Speed">
+    <field name="value" abbrev="value" type="fp64_t" unit="m/s" />
+  </message>
+
+  <message id="1933" abbrev="ReconDesiredZ" name="Recon Desired Z">
+    <field name="value" abbrev="value" type="fp64_t" unit="m/s" />
+  </message>
+
+
+
 </messages>
